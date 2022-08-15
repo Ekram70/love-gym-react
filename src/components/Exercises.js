@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import { Box, Stack, Typography } from '@mui/material';
 import Pagination from '@mui/material/Pagination';
-import {Box, Stack, Typography} from '@mui/material'
+import React, { useEffect, useState } from 'react';
 
-import {exerciseOptions, fetchData} from '../utils/fetchData'
+import { exerciseOptions, fetchData } from '../utils/fetchData';
 import ExerciseCard from './ExerciseCard';
 
 function Exercises({exercises, setExercises, bodyPart}) {
@@ -39,6 +39,7 @@ function Exercises({exercises, setExercises, bodyPart}) {
     }
 
     fetchExercisesData()
+   // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [bodyPart])
 
    console.log(exercises)
